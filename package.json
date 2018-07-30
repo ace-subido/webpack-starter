@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open --progress --colors" ,
     "build": "webpack --progress --colors -p"
   },
   "dependencies": {},
@@ -20,6 +20,7 @@
     "style-loader": "^0.21.0",
     "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
     "webpack-md5-hash": "^0.0.6"
   }
 }
