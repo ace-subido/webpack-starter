@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
 
 const DEBUG = process.env.NODE_ENV != 'production'
 const SOURCE = './src'
@@ -50,7 +51,8 @@ module.exports = {
       filename: 'index.html'
     }),
     new CleanWebpackPlugin('dist', {}),
-    new CopyWebpackPlugin([{ from: `${SOURCE}/assets`, to: './assets' }])
+    new CopyWebpackPlugin([{ from: `${SOURCE}/assets`, to: './assets' }]),
+    new StylelintWebpackPlugin({ syntax: "scss" })
   ],
 
 };
