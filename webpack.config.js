@@ -3,10 +3,10 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const DEBUG = process.env.NODE_ENV != 'production'
 const SOURCE = './src'
-const DEST = './dist'
 
 module.exports = {
 
@@ -49,7 +49,8 @@ module.exports = {
       template: './src/html/index.html',
       filename: 'index.html'
     }),
-    new CleanWebpackPlugin('dist', {})
+    new CleanWebpackPlugin('dist', {}),
+    new CopyWebpackPlugin([{ from: `${SOURCE}/assets`, to: './assets' }])
   ],
 
 };
