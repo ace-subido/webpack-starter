@@ -22,7 +22,15 @@ mv webpack-starter-master/{yarn.lock,package.json,postcss.config.js,webpack.conf
 rm -rf webpack-starter-master
 ```
 
-## Adding React
+## Extras
+
+Some additional things you can find on this repo
+
+### Publishing to `gh-pages`
+
+- Visit the `publishing` branch
+
+### Adding React
 
 ```
 yarn add react
