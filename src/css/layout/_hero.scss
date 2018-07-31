@@ -1,0 +1,13 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem 0;
+  color: var(--gray);
+  text-align: center;
+
+  img {
+    width: 128px;
+  }
+}
