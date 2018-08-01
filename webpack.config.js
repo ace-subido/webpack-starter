@@ -54,7 +54,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin("dist", {}),
     new CopyWebpackPlugin([{ from: `${SOURCE}/assets`, to: "./assets" }]),
-    new StylelintWebpackPlugin({ syntax: "scss" })
+    new StylelintWebpackPlugin({ syntax: "scss", failOnError: false })
   ],
 
   devtool: DEBUG ? "source-map" : "hidden-source-map"

@@ -1,0 +1,9 @@
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color 300ms ease-out;
+
+  &:hover {
+    color: darken($blue, 20%);
+  }
+}
