@@ -6,7 +6,10 @@ module.exports = {
   },
   "extends": [
     "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
+  "plugins": ["prettier"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -16,6 +19,7 @@ module.exports = {
       "error",
       2
     ],
+    "no-console": "off",
     "linebreak-style": [
       "error",
       "unix"
@@ -23,6 +27,7 @@ module.exports = {
     "quotes": [
       "warn",
       "single"
-    ]
+    ],
+    "prettier/prettier": "error"
   }
 };
