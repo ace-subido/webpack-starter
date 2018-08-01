@@ -57,4 +57,5 @@ module.exports = {
     new StylelintWebpackPlugin({ syntax: "scss" })
   ],
 
+  devtool: DEBUG ? "source-map" : "hidden-source-map"
 };
