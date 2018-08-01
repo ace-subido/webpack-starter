@@ -1,33 +1,23 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true
   },
-  "extends": [
-    "eslint:recommended",
-    "prettier",
-    "plugin:prettier/recommended"
+  extends: [
+    "eslint:recommended"
   ],
-  "plugins": ["prettier"],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module"
   },
-  "rules": {
-    "indent": [
+  rules: {
+    indent: [
       "error",
       2
     ],
     "no-console": "off",
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "warn",
-      "single"
-    ],
-    "prettier/prettier": "error"
+    "linebreak-style": ["error", "unix"],
+    quotes: ["warn", "double"],
   }
 };

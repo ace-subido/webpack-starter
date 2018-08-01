@@ -1,2 +1,5 @@
-webpack.config.js
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
+prettier.config.js
 postcss.config.js

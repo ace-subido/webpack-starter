@@ -1,8 +1,11 @@
+const DEBUG = process.env.NODE_ENV !== "production";
+
 module.exports = {
-  syntax: 'postcss-scss',
+  syntax: "postcss-scss",
   plugins: [
-    require('autoprefixer'),
-    require('cssnano')({ preset: 'default' }),
-    require('postcss-preset-env')()
-  ]
+    require("autoprefixer"),
+    require("postcss-preset-env")()
+  ].concat(!DEBUG ? [
+    require('cssnano')({ preset: 'default' })
+  ] : [])
 };

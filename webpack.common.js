@@ -6,7 +6,6 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const StylelintWebpackPlugin = require("stylelint-webpack-plugin");
 
-const DEBUG = process.env.NODE_ENV != "production";
 const SOURCE = "./src";
 
 module.exports = {
@@ -55,7 +54,5 @@ module.exports = {
     new CleanWebpackPlugin("dist", {}),
     new CopyWebpackPlugin([{ from: `${SOURCE}/assets`, to: "./assets" }]),
     new StylelintWebpackPlugin({ syntax: "scss", failOnError: false })
-  ],
-
-  devtool: DEBUG ? "source-map" : "hidden-source-map"
+  ]
 };
